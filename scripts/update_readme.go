@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"regexp"
+	"strings"
 )
 
 func UpdateReadme(readme, pattern string) error {
@@ -44,6 +45,10 @@ func updateContent(filename, content, pattern string) string {
 			subContent, err := readFile(subReadme)
 			if err != nil {
 				return fmt.Sprintf("<WARNING: %s not found>", subReadme)
+			}
+			lines := strings.Split(subContent, "\n")
+			if len(lines) > 1 {
+				subContent = strings.Join(lines[1:], "\n")
 			}
 			return updateLinks(subContent, filename)
 		},
