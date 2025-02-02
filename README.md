@@ -8,12 +8,15 @@ While the project is open for reference, its primary purpose is for personal stu
 
 ## Patterns
 
+### [Creational](creational)
 <INSERT:creational>
 ---
 
+### [Structural](structural)
 <INSERT:structural>
 ---
 
+### [Behavioral](behavioral)
 <INSERT:behavioral>
 ---
 

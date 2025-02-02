@@ -1,4 +1,4 @@
-### [Creational](creational)
+## Creational
 
 Creational design patterns are concerned with the way objects are created.
 They help to make a system independent of how its objects are created, composed, and represented.

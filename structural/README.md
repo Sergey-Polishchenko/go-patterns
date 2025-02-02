@@ -1,4 +1,4 @@
-### [Structural](structural)
+## Structural
 
 Structural design patterns deal with object composition or the way objects are structured to form larger structures.
 They help to ensure that if one part of a system changes, the entire structure doesn't need to change.

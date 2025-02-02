@@ -1,4 +1,4 @@
-### [Behavioral](behavioral)
+## Behavioral
 
 Behavioral design patterns are concerned with algorithms and the assignment of responsibilities between objects.
 They focus on how objects interact and communicate with each other, ensuring that objects can work together in a flexible and maintainable way.
