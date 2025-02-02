@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PAT }}
 
       - name: Set up Go
         uses: actions/setup-go@v4
@@ -23,8 +25,13 @@ jobs:
 
       - name: Commit changes
         run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
-          git add README.md
-          git commit -m "Automatically update README.md with Go script"
-          git push
+          run: |
+          if git diff --quiet; then
+            echo "No changes to commit."
+          else
+            git config --global user.name "GitHub Actions"
+            git config --global user.email "actions@github.com"
+            git add README.md
+            git commit -m "docs: Automatically update README.md with Go script [skip ci]"
+            git push https://${{ secrets.PAT }}@github.com/${{ github.repository }}.git main
+          fi
