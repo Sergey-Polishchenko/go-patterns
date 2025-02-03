@@ -50,12 +50,13 @@ func updateContent(filename, content, pattern string) string {
 			if len(lines) > 1 {
 				subContent = strings.Join(lines[1:], "\n")
 			}
-			return updateLinks(subContent, filename)
+			updatedContent := updateDirLinks(subContent, filename)
+			return updateFileLinks(updatedContent, dirName)
 		},
 	)
 }
 
-func updateLinks(content, pattern string) string {
+func updateDirLinks(content, pattern string) string {
 	re := regexp.MustCompile(fmt.Sprintf(`\[(.*?)\]\(\.\./%s#(\w+)\)`, pattern))
 
 	return re.ReplaceAllStringFunc(
@@ -64,6 +65,19 @@ func updateLinks(content, pattern string) string {
 			header := re.FindStringSubmatch(match)[1]
 			headerLink := re.FindStringSubmatch(match)[2]
 			return fmt.Sprintf("[%s](#%s)", header, headerLink)
+		},
+	)
+}
+
+func updateFileLinks(content, dir string) string {
+	re := regexp.MustCompile(`\[(.*?)\]\((\w+)\)`)
+
+	return re.ReplaceAllStringFunc(
+		content,
+		func(match string) string {
+			header := re.FindStringSubmatch(match)[1]
+			headerLink := re.FindStringSubmatch(match)[2]
+			return fmt.Sprintf("[%s](./%s/%s)", header, dir, headerLink)
 		},
 	)
 }
