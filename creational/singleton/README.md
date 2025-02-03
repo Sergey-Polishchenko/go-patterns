@@ -53,3 +53,9 @@ This method is usually called GetInstance.
     In any case, the method returns the single instance of the class.
 
 This method is typically implemented as a static method so that it can be called without the need to create an object of the class.
+
+### Implementation Details in Go
+
+In Go, the Singleton pattern is implemented differently due to the lack of classes and static methods.
+Instead, global variables and synchronization mechanisms like sync.Once are used to ensure thread safety and lazy initialization.
+This guarantees that only one instance of the object is created and globally accessible.
