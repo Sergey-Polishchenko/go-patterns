@@ -24,5 +24,5 @@ They abstract the instantiation process, making it easier to introduce new types
     + [Abstract Factory]()
     + [Builder]()
     + [Prototype]()
-    + [Singleton]()
+    + [Singleton](singleton)
 
