@@ -18,7 +18,7 @@ They abstract the instantiation process, making it easier to introduce new types
 ### List of Patterns
 
 - **Class-level patterns**
-    + [Factory Method]()
+    + [Factory Method](factory_method)
 
 - **Object-level patterns**
     + [Abstract Factory]()
