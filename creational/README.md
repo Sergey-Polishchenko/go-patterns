@@ -21,7 +21,7 @@ They abstract the instantiation process, making it easier to introduce new types
     + [Factory Method](factory_method)
 
 - **Object-level patterns**
-    + [Abstract Factory]()
+    + [Abstract Factory](abstract_factory)
     + [Builder]()
     + [Prototype]()
     + [Singleton](singleton)
