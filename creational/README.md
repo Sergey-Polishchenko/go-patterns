@@ -22,7 +22,7 @@ They abstract the instantiation process, making it easier to introduce new types
 
 - **Object-level patterns**
     + [Abstract Factory](abstract_factory)
-    + [Builder]()
+    + [Builder](builder)
     + [Prototype]()
     + [Singleton](singleton)
 
