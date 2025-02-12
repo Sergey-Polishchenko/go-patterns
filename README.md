@@ -9,15 +9,106 @@ While the project is open for reference, its primary purpose is for personal stu
 ## Patterns
 
 ### [Creational](creational)
-<INSERT:creational>
+
+Creational design patterns are concerned with the way objects are created.
+They help to make a system independent of how its objects are created, composed, and represented.
+These patterns provide various object creation mechanisms, which increase flexibility and reuse of existing code.
+They abstract the instantiation process, making it easier to introduce new types of objects without changing the existing code.
+
+- **Class-level patterns**
+    Class-level patterns change the class of the created object through inheritance.
+    These patterns define how objects are instantiated by delegating the responsibility to subclasses.
+
+- **Object-level patterns**
+    Object-level patterns create new objects by using other objects.
+    These patterns focus on delegating the instantiation process to another object, promoting flexibility and decoupling.
+
+---
+
+### List of Patterns
+
+- **Class-level patterns**
+    + [Factory Method](./creational/factory_method)
+
+- **Object-level patterns**
+    + [Abstract Factory](./creational/abstract_factory)
+    + [Builder](./creational/builder)
+    + [Prototype](./creational/prototype)
+    + [Singleton](./creational/singleton)
+
+
 ---
 
 ### [Structural](structural)
-<INSERT:structural>
+
+Structural design patterns deal with object composition or the way objects are structured to form larger structures.
+They help to ensure that if one part of a system changes, the entire structure doesn't need to change.
+These patterns focus on how classes and objects are composed to form larger structures, simplifying the design by identifying relationships between entities.
+Structural patterns often use inheritance to compose interfaces or implementations.
+
+- **Class-level patterns**
+    Class-level patterns describe interactions between classes and their subclasses.
+    These relationships are expressed through inheritance and class implementation.
+    Here, the base class defines the interface, while subclasses provide the implementation.
+
+- **Object-level patterns**
+    Object-level patterns describe interactions between objects.
+    These relationships are expressed through [associations](#association), [aggregation](#aggregation), and [composition](#composition).
+    Structures are built by combining objects of certain classes, allowing for dynamic and flexible designs.
+
+---
+
+### List of Patterns
+
+- **Class-level patterns**
+    + [Adapter]()
+
+- **Object-level patterns**
+    + [Bridge]()
+    + [Composite]()
+    + [Decorator]()
+    + [Facade]()
+    + [Flyweight]()
+    + [Proxy]()
+
+
 ---
 
 ### [Behavioral](behavioral)
-<INSERT:behavioral>
+
+Behavioral design patterns are concerned with algorithms and the assignment of responsibilities between objects.
+They focus on how objects interact and communicate with each other, ensuring that objects can work together in a flexible and maintainable way.
+These patterns help to define the ways in which objects interact and distribute responsibility, making it easier to manage complex control flows and communication between objects.
+
+- **Class-level patterns**
+    Class-level patterns describe interactions between classes and their subclasses.
+    These relationships are expressed through inheritance and class implementation.
+    The base class defines the interface, while subclasses provide the implementation.
+
+- **Object-level patterns**
+    Object-level patterns describe interactions between objects.
+    These relationships are expressed through [associations](#association), [aggregation](#aggregation), and [composition](#composition).
+    Structures are built by combining objects of certain classes, enabling dynamic and flexible behavior.
+
+---
+
+### List of Patterns
+
+- **Class-level patterns**
+    + [Template Method]()
+
+- **Object-level patterns**
+    + [Chain of Responsibility]()
+    + [Command]()
+    + [Iterator]()
+    + [Mediator]()
+    + [Memento]()
+    + [Observer]()
+    + [State]()
+    + [Strategy]()
+    + [Visitor]()
+
+
 ---
 
 ## Theory Box
